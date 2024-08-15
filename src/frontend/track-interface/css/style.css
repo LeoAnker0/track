@@ -1,0 +1,108 @@
+:root {
+    --font-main: 'NeueMontreal', sans-serif;
+    --font-secondary: 'NeueMontreal', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: var(--font-main);
+
+    font-weight: 400;
+    font-size: 16px;
+
+    /* old svg filters */
+    --make-svg-light-grey: invert(1) invert(91%) sepia(12%) saturate(216%) hue-rotate(359deg) brightness(89%) contrast(83%);
+    --make-svg-orange: invert(1) invert(64%) sepia(77%) saturate(6168%) hue-rotate(351deg) brightness(101%) contrast(84%);
+    --make-svg-dark-grey: invert(1) invert(8%) sepia(6%) saturate(675%) hue-rotate(2deg) brightness(93%) contrast(85%);
+    --make-svg-grey-2: invert(1) invert(21%) sepia(5%) saturate(742%) hue-rotate(355deg) brightness(92%) contrast(86%);
+    --make-svg-grey-3: invert(1) invert(37%) sepia(10%) saturate(302%) hue-rotate(357deg) brightness(95%) contrast(89%);
+
+    /* new svg filters */
+    --make-svg-grey: sepia(3%) saturate(965%) hue-rotate(41deg) brightness(116%) contrast(80%);
+    --make-svg-black: invert(1) invert(2%) sepia(12%) saturate(135%) hue-rotate(314deg) brightness(108%) contrast(83%);
+    --make-svg-white: invert(1) invert(99%) sepia(86%) saturate(57%) hue-rotate(235deg) brightness(110%) contrast(96%);
+    --make-svg-secondary: invert(48%) sepia(46%) saturate(887%) hue-rotate(190deg) brightness(90%) contrast(101%) brightness(95%);
+
+    /* animations ? */
+    --transition-speed: 18ms;
+
+    /* colours */
+    --text: hsl(0, 0%, 10%);
+    --text-secondary: hsl(0, 0%, 50%);
+    --text-third: hsl(0, 0%, 20%);
+    --grey: hsl(0, 0%, 92%);
+    --lgrey: hsl(0, 0%, 88%);
+    --lgrey2: hsl(0, 0%, 84%);
+    --lgrey3: hsl(0, 0%, 94%);
+    --background: hsl(0, 0%, 96%);
+    --background-transparent: hsla(0, 0%, 96%, 0.7);
+    --background-transparent-subtle: hsla(0, 0%, 96%, 0.1);
+    --background-transparent-fog: hsla(0, 0%, 96%, 0.85);
+
+
+    --primary: hsl(210, 100%, 78%);
+    --secondary: hsl(222, 100%, 65%);
+    --secondary-weak: hsl(222, 20%, 92%);
+    --secondary-dark: hsl(222, 80%, 70%);
+    --secondary-weak-dark: hsl(222, 20%, 30%);
+    --orange: hsl(40, 100%, 45%);
+
+    --accent: hsl(165, 90%, 20%);
+    --accent-soft: hsl(165, 25%, 65%);
+    --success: hsl(165, 90%, 35%);
+    --whoopsie: hsl(350, 80%, 60%);
+    --background-overlay: hsla(0, 0%, 0%, 0.6);
+    --background-contrast: hsl(0, 0%, 88%);
+    --transparent-overlay-focus: hsl(0, 0%, 88%);
+    /* inverted colours */
+    --background-dark: hsl(0, 00%, 10%);
+    --background-dark-transparent: hsla(0, 0%, 10%, 0.7);
+    --text-dark: hsl(0, 0%, 98%);
+    --text-dark-secondary: hsl(210, 10%, 80%);
+
+    color: var(--text);
+
+    --width-of-menu: 18rem;
+}
+
+/* Styles for users who prefer a dark theme */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: hsl(0, 00%, 10%);
+        --background-transparent: hsla(0, 0%, 10%, 0.7);
+        --background-transparent-subtle: hsla(0, 0%, 10%, 0.1);
+        --make-svg-black: invert(1) invert(99%) sepia(86%) saturate(57%) hue-rotate(235deg) brightness(110%) contrast(96%);
+        --make-svg-white: invert(1) invert(2%) sepia(12%) saturate(135%) hue-rotate(314deg) brightness(108%) contrast(83%);
+        --text: hsl(0, 0%, 95%);
+        --text-third: hsl(0, 0%, 90%);
+        --text-secondary: hsl(210, 10%, 90%);
+        --grey: hsl(0, 0%, 25%);
+        --transparent-overlay: hsl(0, 0%, 15%);
+        --transparent-overlay-focus: hsl(0, 0%, 20%);
+
+        --primary: hsl(210, 100%, 78%);
+        --secondary: hsl(222, 80%, 70%);
+        --secondary-weak: hsl(222, 20%, 30%);
+        --orange: hsl(40, 100%, 65%);
+
+        --accent: hsl(165, 40%, 80%);
+        --accent-soft: hsl(165, 10%, 20%);
+        --whoopsie: hsl(350, 100%, 70%);
+
+
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100svh;
+    width: 100svw;
+
+    color: var(--text);
+    background-color: var(--background);
+}
