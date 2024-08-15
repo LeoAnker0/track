@@ -1,0 +1,23 @@
+services:
+  track-server:
+    build:
+      context: ./services/track-server
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./global-resources:/app/global-resources
+    ports:
+      - "6051:${ADMIN_PORT}"
+    networks:
+      - track-tunnel
+
+
+networks:
+  track-tunnel:
+    driver: bridge
+
+
+volumes:
+  global-resources:
+    driver: local
